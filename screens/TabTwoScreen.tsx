@@ -1,14 +1,17 @@
 import { StyleSheet } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+      <Text style={styles.title}>Bench</Text>
+      <View style={styles.separator} lightColor="#eee" darkColor="#eee" />
+      <Text style={styles.content}>
+        The bench is where cards not in active play live.
+        This could be either unused trades, deck alternates, or investment items.
+        
+      </Text>
     </View>
   );
 }
@@ -28,4 +31,8 @@ const styles = StyleSheet.create({
     height: 1,
     width: '80%',
   },
+  content: {
+    fontSize: 18,
+    width: '80%'
+  }
 });

@@ -6873,6 +6873,11 @@ react-native-gradle-plugin@^0.0.6:
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.0.6.tgz#b61a9234ad2f61430937911003cddd7e15c72b45"
   integrity sha512-eIlgtsmDp1jLC24dRn43hB3kEcZVqx6DUQbR0N1ABXGnMEafm9I3V3dUUeD1vh+Dy5WqijSoEwLNUPLgu5zDMg==
 
+react-native-mmkv@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/react-native-mmkv/-/react-native-mmkv-2.4.1.tgz#9e6a29f55911be2b990776bfb961b4f118126153"
+  integrity sha512-sCH8nm7KmRnMzG6wNDfon8jw/mFUfVAEQed5258kpMc2LtEdK47P34GPCovTnEtogWX8z8RQZ5rEGGgty8srtA==
+
 react-native-safe-area-context@4.2.4:
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-4.2.4.tgz#4df42819759c4d3c74252c8678c2772cfa2271a6"

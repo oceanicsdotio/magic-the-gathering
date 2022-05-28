@@ -106,7 +106,7 @@ function BottomTabNavigator() {
         component={TabTwoScreen}
         options={{
           title: 'Bench',
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons size={30} style={{ marginBottom: -3 }} color={color} name={"castle"} />,
+          tabBarIcon: CastleIcon,
         }}
       />
     </BottomTab.Navigator>

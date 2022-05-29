@@ -1,15 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { Text, View } from './Themed';
-import { RootTabScreenProps } from '../types';
-
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Collections</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-    </View>
-  );
-}
+import { View } from './View';
+import { Text } from './Text';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,3 +18,13 @@ const styles = StyleSheet.create({
     width: '80%',
   },
 });
+
+export default function TabOneScreen() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Collections</Text>
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+    </View>
+  );
+}
+

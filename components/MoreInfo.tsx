@@ -11,7 +11,7 @@ import type { RootStackParamList } from "../types";
 
 const MoreInfo =
   (destination: keyof RootStackParamList) =>
-  ({}) => {
+  () => {
     const { navigate } = useNavigation();
     const colorScheme = useColorScheme();
 

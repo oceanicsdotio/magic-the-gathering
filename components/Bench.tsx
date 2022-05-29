@@ -1,20 +1,6 @@
 import { StyleSheet } from 'react-native';
-
-import { Text, View } from './Themed';
-
-export default function TabTwoScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Bench</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="#eee" />
-      <Text style={styles.content}>
-        The bench is where cards not in active play live.
-        This could be either unused trades, deck alternates, or investment items.
-        
-      </Text>
-    </View>
-  );
-}
+import { Text } from './Text';
+import { View } from './View';
 
 const styles = StyleSheet.create({
   container: {
@@ -36,3 +22,22 @@ const styles = StyleSheet.create({
     width: '80%'
   }
 });
+
+/**
+ * Represents a roster of available cards to swap into the
+ * active pool. 
+ */
+export function Bench() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Bench</Text>
+      <View style={styles.separator} lightColor="#eee" darkColor="#eee" />
+      <Text style={styles.content}>
+        The bench is where cards not in active play live.
+        This could be either unused trades, deck alternates, or investment items.
+      </Text>
+    </View>
+  );
+}
+
+export default Bench;

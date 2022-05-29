@@ -12,6 +12,21 @@ The app can be started on the Expo server with `expo start`, which will publish 
 
 To run just the mobile version you can `yarn ios`. You can access this from a phone that has Expo Go installed.
 
+## Component topology
+
+The dependency graph of the navigation ans screen components is provided below for reference:
+
+```mermaid
+graph TD
+    Navigation --> App;
+    BottomTabNavigator --> Navigation;
+    DecklistSummary --> Navigation;
+    NotFound --> Navigation;
+    Bench --> BottomTabNavigator;
+    Decklist --> BottomTabNavigator;
+    MoreInfo --> BottomTabNavigator;
+```
+
 ## Further reading
 
  - [Available icons catalog](https://icons.expo.fyi/)

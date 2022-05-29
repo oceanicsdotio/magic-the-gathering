@@ -14,10 +14,6 @@ import { useColorScheme } from "../hooks/useColorScheme";
 import Colors from "../constants/Colors";
 import { RootTabParamList } from "../types";
 
-const DECKLIST = "Decklist";
-const BENCH = "Bench";
-const MORE_INFO = "Modal";
-
 /**
  * A bottom tab navigator displays tab buttons on the bottom of the display to switch screens.
  * https://reactnavigation.org/docs/bottom-tab-navigator
@@ -25,37 +21,22 @@ const MORE_INFO = "Modal";
 const { Navigator, Screen } = createBottomTabNavigator<RootTabParamList>();
 
 /**
+ * Precalculate the static screen data. 
+ *  
  * Convenience wrapper/generator around Material Icon set. The Navigator
  * component provides the color definition from `tabBarActiveTintColor`
  */
-const materialIcon =
-  (name: string) =>
-  ({ color }: { color: any }) =>
-    (
-      // @ts-ignore
-      <MaterialCommunityIcons
-        size={30}
-        style={{ marginBottom: -3 }}
-        color={color}
-        // @ts-ignore
-        name={name}
-      />
-    );
-
-/**
- * Precalculate the static screen data.
- */
 const SCREENS = [
   {
-    name: DECKLIST,
+    name: "Decklist",
     component: Decklist,
     options: {
       icon: "shield-sword-outline",
-      headerRight: MoreInfo(MORE_INFO),
+      headerRight: MoreInfo("Modal"),
     },
   },
   {
-    name: BENCH,
+    name: "Bench",
     component: Bench,
     options: {
       icon: "castle",
@@ -67,7 +48,16 @@ const SCREENS = [
     name,
     options: {
       title: name,
-      tabBarIcon: materialIcon(icon),
+      tabBarIcon: ({ color }: { color: string }) => (
+        // @ts-ignore
+        <MaterialCommunityIcons
+          size={30}
+          style={{ marginBottom: -3 }}
+          color={color}
+          // @ts-ignore
+          name={icon}
+        />
+      ),
       ...additionalOptions,
     },
   })
@@ -79,14 +69,14 @@ const SCREENS = [
  * In the future, may want to hide this after a delay, to maximize
  * the screen space available for item information.
  */
-function BottomTabNavigator() {
+export function BottomTabNavigator() {
   // Theming
   const colorScheme = useColorScheme();
 
   return (
     // @ts-ignore
     <Navigator
-      initialRouteName={DECKLIST}
+      initialRouteName={SCREENS[0].name}
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}

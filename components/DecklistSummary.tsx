@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { Platform, StyleSheet } from 'react-native';
-import { Text, View } from './Themed';
+import { Text } from './Text';
+import { View } from './View';
 
 const styles = StyleSheet.create({
   container: {
@@ -36,6 +37,4 @@ export function DecklistSummary() {
   );
 }
 
-export default DecklistSummary
-
-
+export default DecklistSummary;

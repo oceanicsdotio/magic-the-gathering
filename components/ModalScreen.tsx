@@ -1,15 +1,19 @@
-import { StyleSheet } from 'react-native';
-import { Text, View } from '../components/Themed';
-import { RootTabScreenProps } from '../types';
+import { StatusBar } from 'expo-status-bar';
+import { Platform, StyleSheet } from 'react-native';
+import { Text, View } from './Themed';
 
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+export function DecklistSummary() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Collections</Text>
+      <Text style={styles.title}>Detail</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      {/* Use a light status bar on iOS to account for the black space above the modal */}
+      <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
     </View>
   );
 }
+
+export default DecklistSummary
 
 const styles = StyleSheet.create({
   container: {

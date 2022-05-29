@@ -16,10 +16,10 @@ import { ColorSchemeName, Pressable } from "react-native";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
-import ModalScreen from "./ModalScreen";
+import ModalScreen from "./DecklistSummary";
 import NotFoundScreen from "./NotFoundScreen";
-import TabOneScreen from "./TabOneScreen";
-import TabTwoScreen from "./TabTwoScreen";
+import TabOneScreen from "./Decklist";
+import TabTwoScreen from "./Bench";
 import {
   RootStackParamList,
   RootTabParamList,

@@ -62,6 +62,7 @@
     "@typescript-eslint/parser": "^5.26.0",
     "babel-loader": "^8.2.5",
     "eslint": "^8.16.0",
+    "expo-cli": "^5.4.7",
     "jest": "^26.6.3",
     "jest-expo": "~45.0.0",
     "react-test-renderer": "17.0.2",

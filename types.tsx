@@ -18,6 +18,14 @@ declare global {
   }
 }
 
+/**
+ * Controls allowed tabs on <BottomTab/>
+ */
+ export type RootTabParamList = {
+  Decklist: undefined;
+  Bench: undefined;
+};
+
 export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   Modal: undefined;
@@ -28,14 +36,6 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> = Nati
   RootStackParamList,
   Screen
 >;
-
-/**
- * Controls allowed tabs on <BottomTab/>
- */
-export type RootTabParamList = {
-  Decklist: undefined;
-  Bench: undefined;
-};
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
   BottomTabScreenProps<RootTabParamList, Screen>,
@@ -80,7 +80,7 @@ type WizardsSet = {
  * functionally the same, except for those that aren't 
  * tournament legal.
  */
-type Edition = {
+export type Edition = {
   set: [WizardsSet, number];
   printing?: PrintingType;
   language: string;
@@ -89,14 +89,14 @@ type Edition = {
 /**
  * 
  */
-type Snapshot = {
-  timestamp: Number;
+export type Snapshot = {
+  timestamp: number;
   condition?: Condition;
   price?: {
     delta: {
-      low: Number;
-      mid: Number;
-      market: Number;
+      low: number;
+      mid: number;
+      market: number;
     }
   }
 }

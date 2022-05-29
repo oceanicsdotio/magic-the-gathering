@@ -24,9 +24,12 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> = Nati
   Screen
 >;
 
+/**
+ * Controls allowed tabs on <BottomTab/>
+ */
 export type RootTabParamList = {
-  TabOne: undefined;
-  TabTwo: undefined;
+  Decklist: undefined;
+  Bench: undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<

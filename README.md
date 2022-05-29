@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This is a reference implementation for a cross platform application using Expo, React Native, [MMKV](https://github.com/mrousavy/react-native-mmkv), and Storybook. 
+This is a reference implementation for a cross platform application using Expo, React Native, [MMKV](https://github.com/mrousavy/react-native-mmkv), and Storybook. It follows the [component-driven development](https://www.componentdriven.org/) philosophy.
 
 ## Quickstart
 
@@ -10,7 +10,7 @@ The Expo project was initialized with `npx expo init .`. Storybook was added wit
 
 The app can be started on the Expo server with `expo start`, which will publish an iOS and Web version on MacOS.
 
-To run just the mobile version you can `yarn ios`.
+To run just the mobile version you can `yarn ios`. You can access this from a phone that has Expo Go installed.
 
 ## Further reading
 

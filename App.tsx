@@ -12,10 +12,10 @@ import useColorScheme from './hooks/useColorScheme';
 import Navigation from './components/Navigation';
 
 export default function App() {
-  const isLoadingComplete = useCachedResources();
+  const loading = useCachedResources();
   const colorScheme = useColorScheme();
 
-  if (!isLoadingComplete) {
+  if (loading) {
     return null;
   } else {
     return (

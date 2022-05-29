@@ -44,6 +44,7 @@ graph TD
 
  - [Available Expo icons catalog](https://icons.expo.fyi/)
  - [React Navigation docs](https://reactnavigation.org/)
+ - [Apollo Cloud Function](https://www.apollographql.com/docs/apollo-server/v2/deployment/netlify/)
 
 ## Data models
 

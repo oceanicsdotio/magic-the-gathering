@@ -18,13 +18,14 @@ The dependency graph of the navigation ans screen components is provided below f
 
 ```mermaid
 graph TD
-    Navigation --> App;
-    BottomTabNavigator --> Navigation;
-    DecklistSummary --> Navigation;
-    NotFound --> Navigation;
-    Bench --> BottomTabNavigator;
-    Decklist --> BottomTabNavigator;
-    MoreInfo --> BottomTabNavigator;
+    Navigation -- import --> App;
+    BottomTabNavigator -- import --> Navigation;
+    DecklistSummary -- import --> Navigation;
+    NotFound -- import --> Navigation;
+    Bench -- import --> BottomTabNavigator;
+    Decklist -- import --> BottomTabNavigator;
+    MoreInfo -- import --> BottomTabNavigator;
+    MoreInfo -. navigate .-> DecklistSummary
 ```
 
 ## Further reading

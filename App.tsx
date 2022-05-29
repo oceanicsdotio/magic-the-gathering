@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 
 // Pre-calculate area inside notches and touch areas
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import "reflect-metadata";
 
 // Hooks
 import useCachedResources from './hooks/useCachedResources';

@@ -12,6 +12,13 @@ import useColorScheme from './hooks/useColorScheme';
 // Components
 import Navigation from './components/Navigation';
 
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+
+const client = new ApolloClient({
+  uri: "/.netlify/functions/graphql",
+  cache: new InMemoryCache()
+});
+
 export default function App() {
   const loading = useCachedResources();
   const colorScheme = useColorScheme();
@@ -21,7 +28,9 @@ export default function App() {
   } else {
     return (
       <SafeAreaProvider>
-        <Navigation colorScheme={colorScheme} />
+        <ApolloProvider client={client}>
+          <Navigation colorScheme={colorScheme} />
+        </ApolloProvider>
         <StatusBar hidden={true}/>
       </SafeAreaProvider>
     );
